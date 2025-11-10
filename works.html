@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Works</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <nav class="navbar navbar-expand-lg navbar-dark glass fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="logo.png" width="70" height="70" alt="Logo" class="rounded-circle me-2">
+                <span class="fs-4">My Portfolio</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav nav-underline gap-4">
+                    <li class="nav-item"><a class="nav-link" href="index.html">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Works</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contacts</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="navbar-spacer"></div>
+
+    <main class="flex-grow-1">
+        <div class="container py-5">
+            <div class="glass rounded-4 p-5 text-center text-white">
+
+                <h2 class="name-text mb-3">My Works</h2>
+                <p class="greet-text mb-5">Here are some of my projects and works:</p>
+
+                <div class="row row-cols-1 row-cols-md-2 g-5 justify-content-center">
+
+                    <!-- Card 1 -->
+                    <div class="col">
+                        <div class="work-card rounded-4 shadow-lg overflow-hidden position-relative"
+                            style="background-image: url('Techno.jpg'); height: 380px;">
+                            <div class="blur-layer"></div>
+                            <div class="position-absolute top-0 start-0 p-4">
+                                <h5 class="card-title bg-dark bg-opacity-75 px-4 py-2 rounded fw-bold">Techno40Pro</h5>
+                            </div>
+                            <div class="description-overlay position-absolute start-0 end-0 bottom-0 p-4">
+                                <p class="card-text mb-3">A durable and stylish smartphone featuring a high-performance
+                                    MediaTek Dimensity 7300 processor, a 50MP main camera, and a 5200mAh battery with
+                                    45W
+                                    charging.</p>
+                                <a href="https://chrismalabanan.github.io/Techno40Pro/" target="_blank"
+                                    class="btn btn-outline-light btn-sm">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col">
+                        <div class="work-card rounded-4 shadow-lg overflow-hidden position-relative"
+                            style="background-image: url('Thailand.jpg'); height: 380px;">
+                            <div class="blur-layer"></div>
+                            <div class="position-absolute top-0 start-0 p-4">
+                                <h5 class="card-title bg-dark bg-opacity-75 px-4 py-2 rounded fw-bold">Thailand</h5>
+                            </div>
+                            <div class="description-overlay position-absolute start-0 end-0 bottom-0 p-4">
+                                <p class="card-text mb-3">Discover Thailand—a traveler’s dream where rich culture,
+                                    pristine
+                                    beaches, and modern amenities come together seamlessly.</p>
+                                <a href="https://chrismalabanan.github.io/Thailand/" target="_blank"
+                                    class="btn btn-outline-light btn-sm">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
