@@ -15,18 +15,21 @@
     <nav class="navbar navbar-expand-lg navbar-dark glass fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="logo.jpg" width="70" height="70" alt="Logo" class="rounded-circle me-2">
+                <img src="images/logo.jpg" width="70" height="70" alt="Logo" class="rounded-circle me-2">
                 <span class="fs-4">My Portfolio</span>
             </a>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav nav-underline gap-4">
+                <ul class="navbar-nav nav-underline gap-4 me-3">
                     <li class="nav-item"><a class="nav-link" href="index.html">About Me</a></li>
                     <li class="nav-item"><a class="nav-link active" href="#">Works</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contacts</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacts.html">Contacts</a></li>
                 </ul>
+                <button id="modeToggle" class="btn btn-outline-light btn-sm">Toggle Mode</button>
             </div>
         </div>
     </nav>
@@ -35,8 +38,8 @@
 
     <main class="flex-grow-1">
         <div class="container py-5">
-            <div class="glass rounded-4 p-5 text-center text-white">
 
+            <div class="glass rounded-4 p-5 text-center text-white">
                 <h2 class="name-text mb-3">My Works</h2>
                 <p class="greet-text mb-5">Here are some of my projects and works:</p>
 
@@ -53,8 +56,7 @@
                             <div class="description-overlay position-absolute start-0 end-0 bottom-0 p-4">
                                 <p class="card-text mb-3">A durable and stylish smartphone featuring a high-performance
                                     MediaTek Dimensity 7300 processor, a 50MP main camera, and a 5200mAh battery with
-                                    45W
-                                    charging.</p>
+                                    45W charging.</p>
                                 <a href="https://chrismalabanan.github.io/Techno40Pro/" target="_blank"
                                     class="btn btn-outline-light btn-sm">View Details</a>
                             </div>
@@ -62,107 +64,91 @@
                     </div>
 
                     <!-- Card 2 -->
-
                     <div class="col">
                         <div class="work-card rounded-4 shadow-lg overflow-hidden position-relative" style="background-image: url('https://raw.githubusercontent.com/chrismalabanan/Thailand/main/thailand.jpg'); 
-               height: 380px; background-size: cover; background-position: center;">
-
+                            height: 380px; background-size: cover; background-position: center;">
                             <div class="blur-layer"></div>
-
                             <div class="position-absolute top-0 start-0 p-4">
                                 <h5 class="card-title bg-dark bg-opacity-75 px-4 py-2 rounded fw-bold">
                                     Thailand
                                 </h5>
                             </div>
-
                             <div class="description-overlay position-absolute start-0 end-0 bottom-0 p-4">
                                 <p class="card-text mb-3">
                                     <i>Discover Thailand—a traveler’s dream where rich culture,
-                                    pristine beaches, and modern amenities come together seamlessly.</i>
+                                        pristine beaches, and modern amenities come together seamlessly.</i>
                                 </p>
-
                                 <a href="https://chrismalabanan.github.io/Thailand/" target="_blank"
-                                    class="btn btn-outline-light btn-sm">
-                                    <i class="bi bi-link-45deg"></i> View
-                                </a>
-
+                                    class="btn btn-outline-light btn-sm">View</a>
                                 <a href="https://github.com/ChrisMalabanan/Thailand" target="_blank"
-                                    class="btn btn-outline-light btn-sm ms-2">
-                                    <i class="bi bi-github"></i> Source
-                                </a>
+                                    class="btn btn-outline-light btn-sm ms-2">Source</a>
                             </div>
                         </div>
                     </div>
+
                     <!-- Card 3 -->
                     <div class="col">
                         <div class="work-card rounded-4 shadow-lg overflow-hidden position-relative" style="background-image: url('https://raw.githubusercontent.com/chrismalabanan/Tensura-Characters-Gallery/main/images/hero.jpg'); 
-               height: 380px; background-size: cover; background-position: center;">
-
+                            height: 380px; background-size: cover; background-position: center;">
                             <div class="blur-layer"></div>
-
                             <div class="position-absolute top-0 start-0 p-4">
                                 <h5 class="card-title bg-dark bg-opacity-75 px-4 py-2 rounded fw-bold">
                                     Tensura Characters-Gallery
                                 </h5>
                             </div>
-
                             <div class="description-overlay position-absolute start-0 end-0 bottom-0 p-4">
                                 <p class="card-text mb-3">
                                     <i>Characters-Gallery. It features various characters from the
                                         popular anime series "That Time I Got Reincarnated as a Slime" (Tensura).</i>
                                 </p>
-
                                 <a href="https://chrismalabanan.github.io/Tensura-Characters-Gallery/" target="_blank"
-                                    class="btn btn-outline-light btn-sm">
-                                    <i class="bi bi-link-45deg"></i> View
-                                </a>
-
+                                    class="btn btn-outline-light btn-sm">View</a>
                                 <a href="https://github.com/chrismalabanan/Tensura-Characters-Gallery" target="_blank"
-                                    class="btn btn-outline-light btn-sm ms-2">
-                                    <i class="bi bi-github"></i> Source
-                                </a>
+                                    class="btn btn-outline-light btn-sm ms-2">Source</a>
                             </div>
                         </div>
                     </div>
+
                     <!-- Card 4 -->
                     <div class="col">
                         <div class="work-card rounded-4 shadow-lg overflow-hidden position-relative" style="background-image: url('https://raw.githubusercontent.com/ChrisMalabanan/Demon-Slayer-Gallery/main/images/door.jpg'); 
-               height: 380px; background-size: cover; background-position: center;">
-
+                            height: 380px; background-size: cover; background-position: center;">
                             <div class="blur-layer"></div>
-
                             <div class="position-absolute top-0 start-0 p-4">
                                 <h5 class="card-title bg-dark bg-opacity-75 px-4 py-2 rounded fw-bold">
-                                    Tensura Characters-Gallery
+                                    Demon Slayer Characters-Gallery
                                 </h5>
                             </div>
-
                             <div class="description-overlay position-absolute start-0 end-0 bottom-0 p-4">
                                 <p class="card-text mb-3">
-                                    <i>Characters-Gallery. It features various characters from the
-                                        popular anime series "That Time I Got Reincarnated as a Slime" (Tensura).</i>
+                                    <i>Demon Slayer Characters-Gallery. A visually stunning collection showcasing main
+                                        and supporting characters from the hit anime "Demon Slayer: Kimetsu no Yaiba,"
+                                        featuring high-quality artwork, vibrant colors, and detailed character designs
+                                        that bring the story to life.</i>
                                 </p>
-
                                 <a href="https://chrismalabanan.github.io/Demon-Slayer-Gallery/" target="_blank"
-                                    class="btn btn-outline-light btn-sm">
-                                    <i class="bi bi-link-45deg"></i> View
-                                </a>
-
+                                    class="btn btn-outline-light btn-sm">View</a>
                                 <a href="https://github.com/ChrisMalabanan/Demon-Slayer-Gallery" target="_blank"
-                                    class="btn btn-outline-light btn-sm ms-2">
-                                    <i class="bi bi-github"></i> Source
-                                </a>
+                                    class="btn btn-outline-light btn-sm ms-2">Source</a>
                             </div>
                         </div>
                     </div>
 
-
                 </div>
             </div>
+
         </div>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const modeToggle = document.getElementById('modeToggle');
+        modeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            modeToggle.classList.toggle('btn-outline-light');
+            modeToggle.classList.toggle('btn-outline-dark');
+        });
+    </script>
 </body>
 
 </html>

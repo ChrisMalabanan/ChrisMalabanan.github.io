@@ -11,11 +11,10 @@
 </head>
 
 <body class="d-flex flex-column min-vh-100">
-
   <nav class="navbar navbar-expand-lg navbar-dark glass fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="logo.jpg" width="70" height="70" alt="Logo" class="me-2 rounded-circle">
+        <img src="images/logo.jpg" width="70" height="70" alt="Logo" class="me-2 rounded-circle">
         <span class="fs-4">My Portfolio</span>
       </a>
 
@@ -27,7 +26,10 @@
         <ul class="navbar-nav nav-underline gap-4">
           <li class="nav-item"><a class="nav-link active" href="#">About Me</a></li>
           <li class="nav-item"><a class="nav-link" href="works.html">Works</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Contacts</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacts.html">Contacts</a></li>
+          <li class="nav-item">
+            <button id="mode-toggle" class="btn btn-outline-dark btn-sm">Toggle Mode</button>
+          </li>
         </ul>
       </div>
     </div>
@@ -38,53 +40,71 @@
   <main class="flex-grow-1 py-5">
     <div class="container">
 
-      <div class="glass p-4 p-md-5 rounded-4 d-flex flex-column flex-md-row align-items-center text-center text-md-start gap-4 gap-md-5 mb-5">
-
-        <div class="flex-shrink-0">
-          <img src="profile.png" alt="Profile Picture" class="profile-img rounded-circle">
+      <section class="glass p-5 rounded-4 mb-5 text-center text-md-start">
+        <div class="row align-items-center g-4">
+          <div class="col-md-4 text-center">
+            <img src="images/profile.png" class="profile-img">
+          </div>
+          <div class="col-md-8">
+            <p class="greet-text">Hello! I'm</p>
+            <h1 class="name-text">Chrislhin Malabanan</h1>
+            <p class="role-text">I am a <span id="typing"></span><span class="cursor">|</span></p>
+            <p class="about-text">
+              Passionate about web design, user experience, and modern UI development.
+            </p>
+            <a href="files/resume.pdf" class="btn btn-outline-dark mt-3" download>Download Resume</a>
+          </div>
         </div>
+      </section>
 
-        <div class="flex-grow-1">
-          <p class="greet-text">Hello! I'm</p>
-          <h1 class="name-text">Chrislhin Malabanan</h1>
-          <p class="greet-text mt-3">IT Student</p>
-        </div>
-      </div>
-
-      
-      <section class="glass p-4 p-md-5 rounded-4">
-        <div class="row g-4">
+      <section class="glass p-5 rounded-4">
+        <div class="row g-5">
 
           <div class="col-md-6">
-            <h2 class="section-title mb-4">Educational Background</h2>
+            <h2 class="section-title mb-5">Educational Background</h2>
+            <div class="timeline">
+              <div class="timeline-item">
+                <span class="dot"></span>
+                <h5>Bachelor of Science in Information Technology</h5>
+                <p>Polytechnic University of the Philippines</p>
+                <small>2023 – Present</small>
+              </div>
 
-            <div class="education-item mb-4">
-              <h5>Bachelor of Science in Information Technology</h5>
-              <p>Polytechnic University of the Philippines</p>
-              <small>2023 – Present</small>
-            </div>
+              <div class="timeline-item">
+                <span class="dot"></span>
+                <h5>Senior High School – STEM Strand</h5>
+                <p>St. John Academy of Visual And Performing Arts</p>
+                <small>2021 – 2023</small>
+              </div>
 
-            <div class="education-item">
-              <h5>Senior High School – ICT Strand</h5>
-              <p>ABC Senior High School</p>
-              <small>2021 – 2023</small>
+              <div class="timeline-item">
+                <span class="dot"></span>
+                <h5>Junior High School</h5>
+                <p>Janopol Oriental National High School</p>
+                <small>2017– 2021</small>
+              </div>
             </div>
           </div>
 
           <div class="col-md-6">
-            <h2 class="section-title mb-4">Certificates</h2>
+            <h2 class="section-title mb-5">Certificates</h2>
 
             <div class="certificate-grid">
-              <img src="A-sys Certificate.jpg" class="certificate-img"
-                   data-bs-toggle="modal"
-                   data-bs-target="#certificateModal"
-                   onclick="showCertificate(this.src)">
+              <div class="certificate-card" data-bs-toggle="modal"
+                data-bs-target="#certificateModal"
+                onclick="showCertificate('images/A-sys Certificate.jpg')">
+                <img src="images/A-sys Certificate.jpg">
+                <div class="overlay">View</div>
+                <p>Certificate</p>
+              </div>
 
-              <img src="Tech Nexus.jpg" class="certificate-img"
-                   data-bs-toggle="modal"
-                   data-bs-target="#certificateModal"
-                   onclick="showCertificate(this.src)">
-
+              <div class="certificate-card" data-bs-toggle="modal"
+                data-bs-target="#certificateModal"
+                onclick="showCertificate('images/Tech Nexus.jpg')">
+                <img src="images/Tech Nexus.jpg">
+                <div class="overlay">View</div>
+                <p>Certificate</p>
+              </div>
             </div>
           </div>
 
@@ -97,7 +117,7 @@
   <div class="modal fade" id="certificateModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content glass border-0">
-        <div class="modal-body text-center p-3">
+        <div class="modal-body text-center">
           <img id="modalCertificateImg" class="img-fluid rounded-3">
         </div>
       </div>
@@ -105,12 +125,44 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-
   <script>
+    const roles = ["IT Student", "Aspiring Web Developer", "Aspiring UI/UX Designer"];
+    let i = 0, j = 0;
+    const typingSpeed = 100, eraseSpeed = 50, delay = 1500;
+    const typingSpan = document.getElementById("typing");
+    const cursor = document.querySelector(".cursor");
+
+    function type() {
+      if (j < roles[i].length) {
+        typingSpan.textContent += roles[i][j];
+        j++;
+        setTimeout(type, typingSpeed);
+      } else {
+        setTimeout(erase, delay);
+      }
+    }
+
+    function erase() {
+      if (j > 0) {
+        typingSpan.textContent = roles[i].substring(0, j-1);
+        j--;
+        setTimeout(erase, eraseSpeed);
+      } else {
+        i = (i + 1) % roles.length;
+        setTimeout(type, typingSpeed);
+      }
+    }
+
+    type();
+
+    const toggleBtn = document.getElementById("mode-toggle");
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+    });
+
     function showCertificate(src) {
       document.getElementById("modalCertificateImg").src = src;
     }
   </script>
-
 </body>
 </html>
