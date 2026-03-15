@@ -43,97 +43,8 @@
                 <h2 class="name-text mb-3">My Works</h2>
                 <p class="greet-text mb-5">Here are some of my projects and works:</p>
 
-                <div class="row row-cols-1 row-cols-md-2 g-5 justify-content-center">
-
-                    <!-- Card 1 -->
-                    <div class="col">
-                        <div class="work-card rounded-4 shadow-lg overflow-hidden position-relative"
-                            style="background-image: url('Techno.jpg'); height: 380px;">
-                            <div class="blur-layer"></div>
-                            <div class="position-absolute top-0 start-0 p-4">
-                                <h5 class="card-title bg-dark bg-opacity-75 px-4 py-2 rounded fw-bold">Techno40Pro</h5>
-                            </div>
-                            <div class="description-overlay position-absolute start-0 end-0 bottom-0 p-4">
-                                <p class="card-text mb-3">A durable and stylish smartphone featuring a high-performance
-                                    MediaTek Dimensity 7300 processor, a 50MP main camera, and a 5200mAh battery with
-                                    45W charging.</p>
-                                <a href="https://chrismalabanan.github.io/Techno40Pro/" target="_blank"
-                                    class="btn btn-outline-light btn-sm">View Details</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 2 -->
-                    <div class="col">
-                        <div class="work-card rounded-4 shadow-lg overflow-hidden position-relative" style="background-image: url('https://raw.githubusercontent.com/chrismalabanan/Thailand/main/thailand.jpg'); 
-                            height: 380px; background-size: cover; background-position: center;">
-                            <div class="blur-layer"></div>
-                            <div class="position-absolute top-0 start-0 p-4">
-                                <h5 class="card-title bg-dark bg-opacity-75 px-4 py-2 rounded fw-bold">
-                                    Thailand
-                                </h5>
-                            </div>
-                            <div class="description-overlay position-absolute start-0 end-0 bottom-0 p-4">
-                                <p class="card-text mb-3">
-                                    <i>Discover Thailand—a traveler’s dream where rich culture,
-                                        pristine beaches, and modern amenities come together seamlessly.</i>
-                                </p>
-                                <a href="https://chrismalabanan.github.io/Thailand/" target="_blank"
-                                    class="btn btn-outline-light btn-sm">View</a>
-                                <a href="https://github.com/ChrisMalabanan/Thailand" target="_blank"
-                                    class="btn btn-outline-light btn-sm ms-2">Source</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 3 -->
-                    <div class="col">
-                        <div class="work-card rounded-4 shadow-lg overflow-hidden position-relative" style="background-image: url('https://raw.githubusercontent.com/chrismalabanan/Tensura-Characters-Gallery/main/images/hero.jpg'); 
-                            height: 380px; background-size: cover; background-position: center;">
-                            <div class="blur-layer"></div>
-                            <div class="position-absolute top-0 start-0 p-4">
-                                <h5 class="card-title bg-dark bg-opacity-75 px-4 py-2 rounded fw-bold">
-                                    Tensura Characters-Gallery
-                                </h5>
-                            </div>
-                            <div class="description-overlay position-absolute start-0 end-0 bottom-0 p-4">
-                                <p class="card-text mb-3">
-                                    <i>Characters-Gallery. It features various characters from the
-                                        popular anime series "That Time I Got Reincarnated as a Slime" (Tensura).</i>
-                                </p>
-                                <a href="https://chrismalabanan.github.io/Tensura-Characters-Gallery/" target="_blank"
-                                    class="btn btn-outline-light btn-sm">View</a>
-                                <a href="https://github.com/chrismalabanan/Tensura-Characters-Gallery" target="_blank"
-                                    class="btn btn-outline-light btn-sm ms-2">Source</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 4 -->
-                    <div class="col">
-                        <div class="work-card rounded-4 shadow-lg overflow-hidden position-relative" style="background-image: url('https://raw.githubusercontent.com/ChrisMalabanan/Demon-Slayer-Gallery/main/images/door.jpg'); 
-                            height: 380px; background-size: cover; background-position: center;">
-                            <div class="blur-layer"></div>
-                            <div class="position-absolute top-0 start-0 p-4">
-                                <h5 class="card-title bg-dark bg-opacity-75 px-4 py-2 rounded fw-bold">
-                                    Demon Slayer Characters-Gallery
-                                </h5>
-                            </div>
-                            <div class="description-overlay position-absolute start-0 end-0 bottom-0 p-4">
-                                <p class="card-text mb-3">
-                                    <i>Demon Slayer Characters-Gallery. A visually stunning collection showcasing main
-                                        and supporting characters from the hit anime "Demon Slayer: Kimetsu no Yaiba,"
-                                        featuring high-quality artwork, vibrant colors, and detailed character designs
-                                        that bring the story to life.</i>
-                                </p>
-                                <a href="https://chrismalabanan.github.io/Demon-Slayer-Gallery/" target="_blank"
-                                    class="btn btn-outline-light btn-sm">View</a>
-                                <a href="https://github.com/ChrisMalabanan/Demon-Slayer-Gallery" target="_blank"
-                                    class="btn btn-outline-light btn-sm ms-2">Source</a>
-                            </div>
-                        </div>
-                    </div>
-
+                <div class="row row-cols-1 row-cols-md-2 g-5 justify-content-center" id="worksGrid">
+                    <!-- Work cards will be generated by JavaScript -->
                 </div>
             </div>
 
@@ -147,6 +58,81 @@
             document.body.classList.toggle('dark-mode');
             modeToggle.classList.toggle('btn-outline-light');
             modeToggle.classList.toggle('btn-outline-dark');
+        });
+
+        // Auto-generate work cards with a loop
+        const works = [
+            {
+                title: "Techno40Pro",
+                backgroundImage: "Techno.jpg",
+                description: "A durable and stylish smartphone featuring a high-performance MediaTek Dimensity 7300 processor, a 50MP main camera, and a 5200mAh battery with 45W charging.",
+                links: [
+                    { href: "https://chrismalabanan.github.io/Techno40Pro/", label: "View Details" }
+                ]
+            },
+            {
+                title: "Thailand",
+                backgroundImage: "https://raw.githubusercontent.com/chrismalabanan/Thailand/main/thailand.jpg",
+                description: "Discover Thailand—a traveler’s dream where rich culture, pristine beaches, and modern amenities come together seamlessly.",
+                links: [
+                    { href: "https://chrismalabanan.github.io/Thailand/", label: "View" },
+                    { href: "https://github.com/ChrisMalabanan/Thailand", label: "Source" }
+                ]
+            },
+            {
+                title: "Tensura Characters-Gallery",
+                backgroundImage: "https://raw.githubusercontent.com/chrismalabanan/Tensura-Characters-Gallery/main/images/hero.jpg",
+                description: "Characters-Gallery. It features various characters from the popular anime series \"That Time I Got Reincarnated as a Slime\" (Tensura).",
+                links: [
+                    { href: "https://chrismalabanan.github.io/Tensura-Characters-Gallery/", label: "View" },
+                    { href: "https://github.com/chrismalabanan/Tensura-Characters-Gallery", label: "Source" }
+                ]
+            },
+            {
+                title: "Demon Slayer Characters-Gallery",
+                backgroundImage: "https://raw.githubusercontent.com/ChrisMalabanan/Demon-Slayer-Gallery/main/images/door.jpg",
+                description: "Demon Slayer Characters-Gallery. A visually stunning collection showcasing main and supporting characters from the hit anime \"Demon Slayer: Kimetsu no Yaiba,\" featuring high-quality artwork, vibrant colors, and detailed character designs that bring the story to life.",
+                links: [
+                    { href: "https://chrismalabanan.github.io/Demon-Slayer-Gallery/", label: "View" },
+                    { href: "https://github.com/ChrisMalabanan/Demon-Slayer-Gallery", label: "Source" }
+                ]
+            }
+        ];
+
+        const worksGrid = document.getElementById("worksGrid");
+
+        works.forEach(work => {
+            const col = document.createElement("div");
+            col.className = "col";
+
+            const card = document.createElement("div");
+            card.className = "work-card rounded-4 shadow-lg overflow-hidden position-relative";
+            card.style.backgroundImage = `url('${work.backgroundImage}')`;
+            card.style.height = "380px";
+            card.style.backgroundSize = "cover";
+            card.style.backgroundPosition = "center";
+
+            card.innerHTML = `
+                <div class="blur-layer"></div>
+                <div class="position-absolute top-0 start-0 p-4">
+                    <h5 class="card-title bg-dark bg-opacity-75 px-4 py-2 rounded fw-bold">
+                        ${work.title}
+                    </h5>
+                </div>
+                <div class="description-overlay position-absolute start-0 end-0 bottom-0 p-4">
+                    <p class="card-text mb-3">
+                        <i>${work.description}</i>
+                    </p>
+                    ${work.links.map(link => `
+                        <a href="${link.href}" target="_blank" class="btn btn-outline-light btn-sm me-2">
+                            ${link.label}
+                        </a>
+                    `).join("")}
+                </div>
+            `;
+
+            col.appendChild(card);
+            worksGrid.appendChild(col);
         });
     </script>
 </body>
